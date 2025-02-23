@@ -2,7 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Unlocking Creativity: Building Your First AI-Powered Web App</title>
+    <title>Unlocking Creativity: Building Your First Web App</title>
+    <meta name="description" content="A tutorial on building your first web app with GitHub Copilot and VSCode.">
+    <meta name="keywords" content="GitHub, VSCode, Copilot, web development, tutorial">
+    <meta name="author" content="Kathrine Hammervold">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,107 +56,34 @@
             border-top: 1px solid #eee;
             margin: 40px 0;
         }
+        
+        .code-box {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 16px;
+            font-family: monospace;
+            position: relative;
+        }
+        .code-box pre {
+            margin: 0;
+        }
+        .icons {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+        .icon {
+            margin-left: 8px;
+        }
     </style>
 </head>
 <body>
 
-<h2><strong>Session Title:</strong> <em>Unlocking Creativity: Setting up GitHub VSCode with Copilot</em></h2>
+<h2><strong>Session Title:</strong> <em>Unlocking Creativity: Using AI in a web app</em></h2>
+<p>See <a href="FirstWebAppTutorial.html" </href>First web app tutorial </a>for how to set up the dev environment</p>
 
-<hr>
-
-<h3><strong>Session Outline (30 mins):</strong></h3>
-
-
-<h4><strong>2. Setting Up the Development Environment (10 mins)</strong></h4>
-
-<ul>
-    <li><strong>Why VSCode and GitHub?</strong>
-        <ul>
-            <li><strong>VSCode:</strong> A widely using coding environment with AI assistance, perfect for beginners. VSCode has over 14 million monthly active users.</li>
-            <li><strong>GitHub:</strong> Your collaborative playground where you can keep your code and collaborate with others. GitHub hosts over 100 million repositories and has more than 83 million developers.</li>
-        </ul>
-    </li>
-    <li><strong>Step-by-Step Setup:</strong>
-        <ul>
-            <li><strong>Create a GitHub Account</strong>
-                <ul>
-                    <li>Head over to <a href="https://github.com/">GitHub</a> and sign up.</li>
-                    <li><strong>Tip </strong>Learn the basics of repositories, commits, and branches in simple terms, for example by watching this tutorial <a href="https://youtu.be/RGOj5yH7evk?si=ykuGyHcOSieg2oaw">Git and GitHub for beginners</a>
-                    and referencing <a href="https://github.com/git-guides/">Git Guide</a></li>
-                    <li><strong>Tip </strong>Explore projects from your coworkers at TODO <a href="https://github.com/o365-fast">https://github.com/o365-fast</a></li>
-                </ul>
-            </li>
-            <li><strong>Install VSCode</strong>
-                <ul>
-                    <li>Navigate to the <a href="https://code.visualstudio.com/download">VSCode download page</a>.</li>
-                    <li>Download and install VSCode</li>
-                    <li>Download and install <a href="https://github.com/git-guides/install-git">Git</a></li>
-                    <li>Open VSCode and install the GitHub Copilot extension. Documentation <a href="https://code.visualstudio.com/docs/copilot/setup#_set-up-copilot-in-vs-code">here</a></li>
-                    <li><strong>Tip:</strong> You may need to restart VSCode to get Git to work</li>
-                </ul>
-            </li>
-        </ul>
-        <p>Now you should have the basics to start a new private coding project</p>
-        
-    </li>
-    <li><strong>Cloning a Repository:</strong>
-        <ul>
-            <li>Provide a starter template repository URL (TODO).</li>
-            <li>Demonstrate how to clone it using VSCode's built-in Git features.</li>
-            <li><strong>Hands-On Moment:</strong> Try cloning the repo yourself.</li>
-        </ul>
-    </li>
-</ul>
-
-<h4><strong>3. Building the "Hello World" Flask App (10 mins)</strong></h4>
-
-<ul>
-    <li><strong>Introducing Flask:</strong>
-        <ul>
-            <li>Think of Flask as the canvas for your web application's masterpiece—minimalist yet powerful.</li>
-        </ul>
-    </li>
-    <li><strong>Coding Time:</strong>
-        <ul>
-            <li><strong>Create a Virtual Environment:</strong>
-                <ul>
-                    <li>Open the terminal in VSCode.</li>
-                    <li>Run:</li>
-                </ul>
-                <pre><code>python -m venv venv
-source venv/bin/activate   # For Mac/Linux
-venv\Scripts\activate      # For Windows</code></pre>
-            </li>
-            <li><strong>Install Flask:</strong>
-                <pre><code>pip install flask</code></pre>
-            </li>
-            <li><strong>Write the App:</strong>
-                <ul>
-                    <li>In <code>app.py</code>, add:</li>
-                </ul>
-                <pre><code>from flask import Flask
-
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return 'Hello, World! This is your first AI-powered app!'
-
-if __name__ == '__main__':
-    app.run(debug=True)</code></pre>
-            </li>
-            <li><strong>Run the App:</strong>
-                <pre><code>python app.py</code></pre>
-                <ul>
-                    <li>Open a browser and navigate to <code>http://localhost:5000</code>.</li>
-                    <li><strong>Voilà!</strong> They've just built their first web app.</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
-
-<h4><strong>4. Integrating a Public LLM API (15 mins)</strong></h4>
+    
+<h4><strong>Integrating a Public LLM API (15 mins)</strong></h4>
 
 <ul>
     <li><strong>Meet OpenAI's GPT-3:</strong>
