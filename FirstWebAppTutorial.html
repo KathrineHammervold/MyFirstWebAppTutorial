@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Unlocking Creativity: Building Your First Web App</title>
+    <meta name="description" content="A tutorial on building your first web app with GitHub Copilot and VSCode.">
+    <meta name="keywords" content="GitHub, VSCode, Copilot, web development, tutorial">
+    <meta name="author" content="Kathrine Hammervold">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            font-family: Consolas, monospace;
+            font-size: 95%;
+            color: #c7254e;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            overflow: auto;
+            font-family: Consolas, monospace;
+            font-size: 95%;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        blockquote {
+            color: #555;
+            margin: 1em 0;
+            padding-left: 1em;
+            border-left: 4px solid #ddd;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 40px 0;
+        }
+        
+        .code-box {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 16px;
+            font-family: monospace;
+            position: relative;
+        }
+        .code-box pre {
+            margin: 0;
+        }
+        .icons {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+        .icon {
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h2><em>Unlocking Creativity: Building Your First Web App</em></h2>
+
+<h2><strong>1. Setting Up the Development Environment (10 mins)</strong></h2>
+<strong>Why VSCode and GitHub?</strong>
+        <ul>
+            <li><strong>VSCode:</strong> A widely using coding environment with AI assistance, perfect for beginners. VSCode has over 14 million monthly active users.</li>
+            <li><strong>GitHub:</strong> Your collaborative playground where you can keep your code and collaborate with others. GitHub hosts over 100 million repositories and has more than 83 million developers.</li>
+        </ul>
+<strong>Step-by-Step Setup:</strong>    
+            <ol>
+            <li><strong>Create a GitHub Account</strong>
+                <ul>
+                    <li>Head over to <a href="https://github.com/">GitHub</a> and sign up.</li>
+                    <li><strong>Tip </strong>Learn the basics of repositories, commits, and branches in simple terms, for example by watching this tutorial <a href="https://youtu.be/RGOj5yH7evk?si=ykuGyHcOSieg2oaw">Git and GitHub for beginners</a>
+                    and referencing <a href="https://github.com/git-guides/">Git Guide</a></li>
+                    <li><strong>Tip </strong>Explore projects from your coworkers at TODO <a href="https://github.com/o365-fast">https://github.com/o365-fast</a></li>
+                </ul>
+            </li>
+            <li><strong>Install VSCode</strong>
+                <ul>
+                    <li>Navigate to the <a href="https://code.visualstudio.com/download">VSCode download page</a>.</li>
+                    <li>Download and install VSCode</li>
+                    <li>Download and install <a href="https://github.com/git-guides/install-git">Git</a></li>
+                    <li>Open VSCode and install the GitHub Copilot extension. Documentation <a href="https://code.visualstudio.com/docs/copilot/setup#_set-up-copilot-in-vs-code">here</a></li>
+                    <li><strong>Tip:</strong> You may need to restart VSCode to get Git to work</li>
+                </ul>
+            </li>
+            <p>Now you should have the basics to start a new private coding project</p>
+            
+                <li><strong>Install Python:</strong>
+                    <ul>
+                        <li>Download Python from the <a href="https://www.python.org/downloads/">official Python website</a>.</li>
+                        <li>Run the installer and make sure to check the box that says "Add Python to PATH".</li>
+                        <li>Verify the installation by opening a terminal and typing:</li>
+                        <div class="code-box">
+                            <pre><code>python --version</code></pre>
+                        </div>
+                        <li><i>Note: I have a two different version of Python on my machine, this could cause some issues. May not be a problem for you.</i></li>
+                    </ul>
+    <li><strong>Cloning a Repository:</strong>
+        <ul>
+            <li>Open File Explorer and create a folder in your file system where you want to store GitHub repositories,eg <b>C:\&lt;username&gt;\code\repos</b></li>
+            <li>Open the terminal in VS Code, eg through View->Terminal</li>
+            <li>Use the cd command to change the directory to where you want to clone the repository. For example: 
+                <div class=""code-box"">
+                    <pre><code>cd /path/to/your/directory</code></pre>
+            </li>
+            <li>Type the following command to clone the directory
+                <div class=""code-box"">
+                    <pre><code>git clone https://github.com/KathrineHammervold/SkjellesvikMaterialCost-repo.git</code></pre>
+            </li>
+            <li>Navigate to the directory using the cd command and check the Git status
+                <div class=""code-box"">
+                                        <pre><code>cd SkjellesvikMaterialCost-repo</code></pre>
+                                                                    <pre><code>git status</code></pre>
+            </li>
+        </ul>
+    </li>
+</ol>
+
+
+<h2><strong>2. Running a web application</strong></h2>
+
+<body>
+    <p><b>Project Description</b></p>
+    <p>This project is a web application designed to track material and labor costs for building a house. </p>
+    
+    <p><b>Purpose</b></p>
+    <p>The web application helps users view and select materials for different parts of a house. It aims to calculate the total cost based on the selected materials.</p>
+    
+    <p><b>Technologies Used</b></p>
+    <ul>
+        <li><strong>HTML (index.html)</strong>: Used to create the structure of the web pages.</li>
+        <li><strong>JavaScript (script.js)</strong>: Used to add interactivity to the web pages, such as loading data and updating the display.</li>
+        <li><strong>Python (houseparts.py)</strong>: Used on the server side to handle requests and process data.</li>
+        <li><strong>Excel (houseparts.xlsx)</strong>: The data about house parts and materials is stored in an Excel file.</li>
+        <li><strong>Flask</strong>: A lightweight web framework for Python that is used to create the server and API endpoints.</li>
+        <li><strong>Pandas</strong>: A Python library used to read and manipulate data from an Excel file.</li>
+        <li><strong>CORS</strong>: A Flask extension that allows the web application to request resources from the server.</li>
+    </ul>
+    
+    <p><b>How It Works</b></p>
+    <ol>
+        <li>The user opens a web page (index.html) that displays a table for house parts.</li>
+        <li>When the user clicks a button to load data, the JavaScript code (script.js) sends a request to a Flask server (note: the server needs to be started by running the python script in debug mode).</li>
+        <li>The Flask server reads the data from an Excel file using the Pandas library and sends it back to the web page as JSON (you can see the JSON by going to localhost:5000/get_house_parts).</li>
+        <li>The web page then displays the data in a table, allowing the user to select materials for each house part.</li>
+    </ol>
+    
+    <p>Overall, this project combines front-end web technologies (HTML, JavaScript) with back-end server technologies (Python, Flask) to provide a seamless experience for tracking and selecting building materials.</p>
+
+
+
+
+
+    </li>
+
+    <strong>Step-by-Step Setup:</strong>    
+    <ol>
+        <li><strong>Open the repo in VSCode</strong></li>
+        <ul>
+            <li>Open the folder for the repo in VSCode using the Explorer icon in the left nav.</li>
+            <li>Open the python script (houseparts.py) that contains the code to start the Flask server</li>
+        </ul>
+        <li><strong>Start the Flask server</strong></li>
+        <ul>
+            <li>Open a terminal (Menu->View->Terminal)</li>
+            <li>Run the python script (houseparts.py) in debug mode (using the run+bug icon on the left nav). Observe that you will get errors in the terminal window because you haven't installed the right dependencies</li>
+    </ul>
+    <li><strong>Debug possible issues starting the server</strong></li>
+    <p>There are lots of sources of errors that I ran into... These are some ways to debug.</p>
+    <ul>
+        
+        <li><strong>Errors in code: </strong>Try using Copilot to fix the errors, by selecting the code that is wrong, right click, and selecting the "Fix" option from the Copilot menu. Since I did not add a step above to install the libraries used in houseparts.py, you should run into errors with missing dependencies.</li>
+        <li>Install the dependencies
+            <div class="code-box">
+                <pre><code>pip install flask pandas flask_cors openpyxl</code></pre>
+            </div> 
+        </li>
+        <li>Try running the program again (using the button in the left nav). This should start a flask server at the following address: http://127.0.0.1:5000</li>
+        <li><strong>Errors starting the server: </strong>You may get an error in the terminal saying "ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it". 
+            This is likely because you ran the program from the terminal command and it is not running in debug mode</li>
+            <li>If you are successful, the terminal should say 
+                <p style="color: darkred; font-family: Consolas, monospace; background-color: lightgrey; padding: 10px; border-radius: 5px;">
+                    WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+                    
+                </p>
+                <p style="color:#2c3e50; font-family: Consolas, monospace;background-color: lightgrey; padding: 10px; border-radius: 5px;">* Running on http://127.0.0.1:5000</p>
+                </li>
+    </ul>
+    <li><strong>Check the REST endpoint</strong></li>
+    <ul>
+        <li>Open a browser and navigate to http://127.0.0.1:5000/get_house_parts. This is where the Flask server hosts the function that the JavaScript will call.</li>
+        <li>You should see the following
+           <p>[{"Material 1":"Shingles","Material 2":"Metal","Material 3":"Tiles","Part":"Roof"},{"Material 1":"Brick","Material 2":"Concrete","Material 3":"Wood","Part":"Walls"},{"Material 1":"Concrete","Material 2":"Stone","Material 3":"Pavers","Part":"Foundation"}]</p> 
+        </li>
+    </ul>
+    <li><strong>Open the web page and load the data</strong></li>
+    <ul>
+        <li>Open the index.html file that is in the repo in the browser</li>
+        <li>Click the "Load Data" button to load the data from the Flask server</li>
+        <li>Observe that the data is displayed in the table</li>
+    </ul>
+    <li><strong>Debugging the web app</strong></li>
+    <ul>
+        <li>It is always smart to open the dev tools before you load a page. Use F12 to open the sidepane. </li>
+        <li>You can click on the terminal icon to see messages and errors</li>
+    </ul>
+    </ol>
+ </body>
+</html>
